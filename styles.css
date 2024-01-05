@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(skyblue, skyblue 50%, lightgreen 50%, lightgreen);
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    animation: spin 10s linear infinite; /* Adjust the duration and timing function as needed */
+    z-index: 1; /* Ensure the sun is above the clouds */
+}
+
+.cloud1, .cloud2, .cloud3, .cloud4 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    z-index: 2; /* Set the clouds below the sun */
+    opacity: 0; /* Initial opacity for the disappearing effect */
+}
+
+.cloud1 {
+    left: 20%; /* Adjust the position of cloud1 as needed */
+}
+
+
+.cloud2 {
+    margin-top: 20px;
+    left: 60%; /* Adjust the position of cloud2 as needed */
+}
+.cloud3 {
+    margin-top: 60px;
+    left: 83%; /* Adjust the position of cloud2 as needed */
+}
+.cloud4 {
+    margin-top: 70px;
+    left: 2%; /* Adjust the position of cloud2 as needed */
+}
+.flower1{
+    margin-top: 50vh;
+    height: 100px;
+    width: 100px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+.flower2{
+    margin-top: 50vh;
+    height: 100px;
+    width: 100px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+.flower3{
+    margin-top: 50vh;
+    height: 100px;
+    width: 100px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+.f1{
+    position: absolute;
+    margin-left: 83vh;
+    margin-top: 47vh;
+    height: 150px;
+    width: 150px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+.f2{
+    position: absolute;
+    margin-left: 105vh;
+    margin-top: 47vh;
+    height: 150px;
+    width: 150px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+.f3{
+    position: absolute;
+    margin-left: 128vh;
+    margin-top: 47vh;
+    height: 150px;
+    width: 150px;
+    transform-origin: center bottom;
+    animation: sway 2s ease-in-out infinite;
+}
+span {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 40vh;
+    position: fixed;
+    left: 40%;
+    
+}
+.navbar {
+    margin-top: 10vh;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #00f; /* Change the color to your desired hover effect */
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes cloudEffect {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.cloud1, .cloud2, .cloud3, .cloud4 {
+    animation: cloudEffect 10s linear infinite; /* Adjust the duration as needed */
+}
